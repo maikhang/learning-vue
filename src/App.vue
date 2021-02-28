@@ -1,19 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Menu />
+    <input type="text" v-model="name" />
+    <input type="checkbox" v-model="accept" />
+    <h1>
+      {{ name }}
+    </h1>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Menu from "./components/Menu.vue";
 
 export default {
-  name: 'App',
+  name: "App",
+  data() {
+    return {
+      name: "Mai Khang",
+      accept: true,
+    };
+  },
   components: {
-    HelloWorld
-  }
-}
+    Menu,
+  },
+};
 </script>
 
 <style>
